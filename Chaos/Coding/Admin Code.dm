@@ -160,7 +160,7 @@ mob/proc/AdminLoad()
 	if(BudoMaster.Find(src.ckey))
 		for(var/X in typesof(/mob/TourneyMaster/verb))
 			src.verbs+=X
-	if(src.ckey == "anstey93"||src.ckey=="anstey93"||src.ckey=="gintokisempai")
+	if(src.ckey == "anstey93"||src.ckey=="drkidvictor"||src.ckey=="gintokisempai")
 		for(var/X in typesof(/mob/System/Admin/Verbs/TrialGM/verb))
 			src.verbs+=X
 		for(var/X in typesof(/mob/System/Admin/Verbs/LowGM/verb))
@@ -172,8 +172,6 @@ mob/proc/AdminLoad()
 		for(var/X in typesof(/mob/System/Admin/Verbs/MasterGM/verb))
 			src.verbs+=X
 		for(var/X in typesof(/mob/System/Admin/Verbs/StaffGM/verb))
-			src.verbs+=X
-
 			src.verbs+=X
 		src.GMLevel = 7
 		return

@@ -1,10 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1519610210
+LAST_COMPILE_TIME: 1519612845
+DIR: Coding 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 511.1385
-WINDOW: Dragonball Chaos.dme;Map.dmm
-FILE: Map.dmm
+WINDOW: Dragonball Chaos.dme;Map.dmm;Coding\Login.dm;Coding\Admin Code.dm;Coding\New Login.dm
+FILE: Coding\Admin Code.dm
 */
 // END_INTERNALS
