@@ -1,0 +1,92 @@
+mob
+	Saga
+		Super17
+			name="{Saga}Super 17"
+			icon_state="majinbuu"
+			level=1200
+			powerlevel=500000000
+			powerlevel_max=500000000
+			ki=250000000
+			ki_max=250000000
+			strength=350000000
+			strength_max=350000000
+			defence=250000000
+			defence_max=250000000
+			speed=1000
+			zenni=400000
+			exp=7000
+			karma = "Evil"
+			race = "Android"
+			CPS=15
+		Baby
+			name="{Saga}Baby"
+			icon_state="baby"
+			level=1150
+			powerlevel=200000000
+			powerlevel_max=200000000
+			ki=190000000
+			ki_max=190000000
+			strength=350000000
+			strength_max=350000000
+			defence=250000000
+			defence_max=250000000
+			speed=3000
+			zenni=500000
+			exp=9000
+			karma = "Evil"
+			race = "Tuffle"
+			CPS=14
+			Del()
+				if(!src.form_1)
+					var/mob/Saga/Baby/F=new
+					F.loc=src.loc
+					F.form_1=1
+					F.level=1300
+					F.speed=2000
+					F.icon_state="baby1"
+					CPS=15
+				if(src.form_1&&!src.form_2)
+					var/mob/Saga/Baby/F=new
+					F.loc=src.loc
+					F.form_1=1
+					F.form_2=1
+					F.level=1390
+					F.speed=1000
+					F.icon_state="baby2"
+					F.overlays+=new/obj/BabyT
+					F.CPS=16
+				..()
+		Shenron
+			name="{Saga}Shenron"
+			icon_state="shenron"
+			level=1400
+			powerlevel=200000000
+			powerlevel_max=200000000
+			ki=190000000
+			ki_max=190000000
+			strength=350000000
+			strength_max=350000000
+			defence=250000000
+			defence_max=250000000
+			speed=2000
+			zenni=500000
+			exp=9000
+			karma = "Evil"
+			race = "Dragon"
+			CPS=17
+			Del()
+				if(!src.form_1)
+					var/mob/Saga/Shenron/F=new
+					F.loc=src.loc
+					F.form_1=1
+					F.level=1500
+					F.speed=1000
+					F.icon_state="shenron1"
+					F.CPS=19
+				..()
+obj
+	BabyT
+		icon='Sagas.dmi'
+		icon_state="baby2t"
+		pixel_y=32
+		layer=500

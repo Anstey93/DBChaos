@@ -1,0 +1,506 @@
+macro "macro1"
+	elem 
+		name = "CENTER+REP"
+		command = ".center"
+	elem 
+		name = "NORTHEAST+REP"
+		command = ".northeast"
+	elem 
+		name = "SOUTHEAST+REP"
+		command = ".southeast"
+	elem 
+		name = "SOUTHWEST+REP"
+		command = ".southwest"
+	elem 
+		name = "NORTHWEST+REP"
+		command = ".northwest"
+	elem "WEST"
+		name = "WEST+REP"
+		command = ".west"
+	elem "NORTH"
+		name = "NORTH+REP"
+		command = ".north"
+	elem "EAST"
+		name = "EAST+REP"
+		command = ".east"
+	elem "SOUTH"
+		name = "SOUTH+REP"
+		command = ".south"
+
+
+menu "menu"
+	elem 
+		name = "File"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "Options + Messages (F1)"
+		command = ".options"
+		category = "File"
+		saved-params = "is-checked"
+	elem 
+		name = "Save"
+		command = "save"
+		category = "File"
+		saved-params = "is-checked"
+	elem 
+		name = "Logout"
+		command = ".quit"
+		category = "File"
+		saved-params = "is-checked"
+	elem 
+		name = "Resolution"
+		command = ""
+		saved-params = "is-checked"
+	elem "Stretch"
+		name = "Stretch To Fit"
+		command = ".winset \"default.map.icon-size=0\""
+		category = "Resolution"
+		is-checked = true
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon24"
+		name = "24x24"
+		command = ".winset \"default.map.icon-size=24\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon26"
+		name = "26x26"
+		command = ".winset \"default.map.icon-size=26\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon28"
+		name = "28x28"
+		command = ".winset \"default.map.icon-size=28\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon30"
+		name = "30x30"
+		command = ".winset \"default.map.icon-size=30\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon32"
+		name = "32x32"
+		command = ".winset \"default.map.icon-size=32\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon34"
+		name = "34x34"
+		command = ".winset \"default.map.icon-size=34\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon36"
+		name = "36x36"
+		command = ".winset \"default.map.icon-size=36\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon38"
+		name = "38x38"
+		command = ".winset \"default.map.icon-size=38\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon40"
+		name = "40x40"
+		command = ".winset \"default.map.icon-size=40\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon42"
+		name = "42x42"
+		command = ".winset \"default.map.icon-size=42\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon44"
+		name = "44x44"
+		command = ".winset \"default.map.icon-size=44\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+	elem "Icon46"
+		name = "46x46"
+		command = ".winset \"default.map.icon-size=46\""
+		category = "Resolution"
+		can-check = true
+		group = "Size"
+		saved-params = "is-checked"
+
+
+window "Guide"
+	elem "Guide"
+		type = MAIN
+		pos = 372,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-visible = false
+		border = sunken
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+	elem "MainBrowser"
+		type = BROWSER
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = #000000
+		is-default = true
+		border = sunken
+		saved-params = ""
+
+window "Load_Screen"
+	elem "Load_Screen"
+		type = MAIN
+		pos = 372,0
+		size = 848x400
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-visible = false
+		is-disabled = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+	elem "browser1"
+		type = BROWSER
+		pos = 0,0
+		size = 854x400
+		anchor1 = none
+		anchor2 = none
+		saved-params = ""
+	elem "input5"
+		type = INPUT
+		pos = 4,12
+		size = 124x20
+		anchor1 = none
+		anchor2 = none
+		saved-params = ""
+
+window "default"
+	elem "default"
+		type = MAIN
+		pos = 372,0
+		size = 1325x913
+		anchor1 = none
+		anchor2 = none
+		background-color = #808080
+		is-default = true
+		border = sunken
+		drop-zone = true
+		saved-params = "pos;size;is-maximized"
+		title = "Dragonball Z: Super"
+		statusbar = false
+		macro = "macro1"
+		menu = "menu"
+	elem "output2"
+		type = OUTPUT
+		pos = 8,808
+		size = 768x96
+		anchor1 = 1,88
+		anchor2 = 59,99
+		font-family = "Segoe UI"
+		font-size = 8
+		background-color = #c0baba
+		border = sunken
+		saved-params = "max-lines"
+	elem "label47"
+		type = LABEL
+		pos = 8,8
+		size = 768x24
+		anchor1 = 1,1
+		anchor2 = 59,4
+		font-family = "Arial"
+		font-size = 10
+		font-style = "bold"
+		background-color = #c0baba
+		border = sunken
+		saved-params = ""
+		text = "-Dragonball Z: Super-"
+	elem "input4"
+		type = INPUT
+		pos = 890,778
+		size = 422x38
+		anchor1 = 67,96
+		anchor2 = 99,99
+		font-family = "Arial"
+		font-size = 9
+		font-style = "bold"
+		text-color = #f2f2f2
+		background-color = #c0baba
+		border = sunken
+		saved-params = ""
+		command = "Guild-Chat"
+	elem "button58"
+		type = BUTTON
+		pos = 783,778
+		size = 97x38
+		anchor1 = 59,96
+		anchor2 = 66,99
+		font-family = "Arial"
+		font-size = 10
+		font-style = "bold"
+		background-color = #c0baba
+		border = sunken
+		saved-params = "is-checked"
+		text = "Guild Chat"
+		command = "Guild Chat"
+	elem "input3"
+		type = INPUT
+		pos = 890,736
+		size = 422x30
+		anchor1 = 67,92
+		anchor2 = 99,95
+		font-family = "Arial"
+		font-size = 9
+		font-style = "bold"
+		text-color = #f2f2f2
+		background-color = #c0baba
+		border = sunken
+		saved-params = ""
+		command = "say"
+	elem "input2"
+		type = INPUT
+		pos = 888,696
+		size = 422x30
+		anchor1 = 67,88
+		anchor2 = 99,92
+		font-family = "Arial"
+		font-size = 9
+		font-style = "bold"
+		text-color = #ffffff
+		background-color = #c0baba
+		border = sunken
+		saved-params = ""
+		command = "OOC"
+	elem "label45"
+		type = LABEL
+		pos = 776,312
+		size = 534x24
+		anchor1 = 59,51
+		anchor2 = 99,53
+		font-family = "Arial"
+		font-size = 8
+		font-style = "bold"
+		background-color = #c0baba
+		border = sunken
+		saved-params = ""
+		text = "-Chat-"
+	elem "label1"
+		type = LABEL
+		pos = 678,939
+		size = 76x20
+		anchor1 = 50,100
+		anchor2 = 56,100
+		text-color = #400000
+		background-color = #400000
+		saved-params = ""
+		text = ""
+	elem "button3"
+		type = BUTTON
+		pos = 783,736
+		size = 97x30
+		anchor1 = 59,92
+		anchor2 = 66,95
+		font-family = "Arial"
+		font-size = 10
+		font-style = "bold"
+		background-color = #c0baba
+		is-default = true
+		border = sunken
+		saved-params = "is-checked"
+		text = "Say"
+		command = "say"
+	elem "button56"
+		type = BUTTON
+		pos = 8,8
+		size = 24x24
+		anchor1 = 1,1
+		anchor2 = 2,4
+		font-family = "Crystal clear"
+		font-size = 10
+		font-style = "bold"
+		background-color = #a21114
+		border = sunken
+		saved-params = "is-checked"
+		text = "S"
+		command = "save"
+		is-flat = true
+	elem "button2"
+		type = BUTTON
+		pos = 783,696
+		size = 97x30
+		anchor1 = 59,88
+		anchor2 = 66,92
+		font-family = "Arial"
+		font-size = 10
+		font-style = "bold"
+		background-color = #c0baba
+		is-default = true
+		border = sunken
+		saved-params = "is-checked"
+		text = "OOC"
+		command = "ooc"
+	elem "input1"
+		type = INPUT
+		pos = 902,1014
+		size = 853x24
+		anchor1 = 51,94
+		anchor2 = 99,96
+		font-family = "Palatino Linotype"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #000000
+		is-default = true
+		border = sunken
+		saved-params = ""
+		command = "Say"
+	elem "button1"
+		type = BUTTON
+		pos = 794,1014
+		size = 108x24
+		anchor1 = 45,94
+		anchor2 = 51,96
+		font-family = "Palatino Linotype"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #1f1f1f
+		border = sunken
+		saved-params = "is-checked"
+		text = "Say"
+		command = "Say"
+		is-flat = true
+	elem "map"
+		type = MAP
+		pos = 8,32
+		size = 768x768
+		anchor1 = 1,4
+		anchor2 = 59,88
+		is-default = true
+		border = sunken
+		saved-params = "icon-size"
+		icon-size = 32
+		zoom = 1
+	elem "info"
+		type = INFO
+		pos = 776,8
+		size = 534x301
+		anchor1 = 59,13
+		anchor2 = 99,51
+		font-family = "Arial"
+		font-size = 9
+		font-style = "bold"
+		text-color = #ffffff
+		background-color = #c0baba
+		is-default = true
+		border = sunken
+		saved-params = ""
+		highlight-color = #0dc61b
+		tab-background-color = #c0baba
+		tab-font-family = "Crystal clear,Segoe UI"
+		tab-font-size = 8
+		tab-font-style = "bold"
+	elem "output"
+		type = OUTPUT
+		pos = 776,336
+		size = 534x352
+		anchor1 = 59,53
+		anchor2 = 99,88
+		font-family = "Segoe UI"
+		font-size = 8
+		text-color = #f2f2f2
+		background-color = #c0baba
+		is-default = true
+		border = sunken
+		saved-params = "max-lines"
+		visited-color = #a21114
+	elem "input"
+		type = INPUT
+		pos = 902,1038
+		size = 853x27
+		anchor1 = 51,96
+		anchor2 = 99,99
+		font-family = "Palatino Linotype"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #000000
+		is-default = true
+		border = sunken
+		saved-params = ""
+		command = "OOC"
+	elem "button7"
+		type = BUTTON
+		pos = 794,1043
+		size = 108x25
+		anchor1 = 45,98
+		anchor2 = 51,100
+		font-family = "Palatino Linotype"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #1f1f1f
+		border = sunken
+		saved-params = "is-checked"
+		text = "OOC"
+		command = "OOC"
+		is-flat = true
+
+window "MOTD"
+	elem "MOTD"
+		type = MAIN
+		pos = 372,0
+		size = 425x390
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-visible = false
+		border = sunken
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Updates"
+		statusbar = false
+		can-resize = false
+	elem "label46"
+		type = LABEL
+		pos = 84,32
+		size = 260x48
+		anchor1 = none
+		anchor2 = none
+		font-family = "Arial"
+		font-size = 13
+		font-style = "bold"
+		text-color = #808080
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = "Dragonball Z Updates"
+	elem "Title"
+		type = LABEL
+		pos = 85,80
+		size = 259x280
+		anchor1 = 20,7
+		anchor2 = 81,92
+		font-size = 2
+		text-color = #808080
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+		text-wrap = true
+

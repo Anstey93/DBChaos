@@ -1,0 +1,65 @@
+mob
+	var
+		hbtc_times=0
+		hbtc_timer=360
+		in_hbtc=0
+	proc
+		HBTC_Countdown()
+			if(src.z==6)
+				src.hbtc_timer-=1
+				if(src.hbtc_timer<=0)
+					src.loc=locate(19,156,7)
+					src.it_lock=0
+					src.it_blocked=0
+					src.grav=0
+					src.in_hbtc=0
+					src.hbtc_timer=360
+					src<<"Your time in the HBTC has expired."
+					return
+				spawn(300)src.HBTC_Countdown()
+
+turf
+	Gravity
+		HBTC
+			Entered(var/mob/PC/M)
+				if(istype(M,/mob/PC))
+					var/strrand=rand(10,20)
+					var/defrand=rand(10,20)
+					M.exp+=rand(2,4)
+					M.strength+=strrand
+					M.strength_max+=strrand
+					M.defence+=defrand
+					M.defence_max+=defrand
+					M.powerlevel-=strrand*5000
+					M.staminaleft+=rand(0.5,2)
+					M.Level_Up()
+					M.GRAVITYDeath()
+	Passages
+		HBTC
+			Entrance
+				Enter(var/mob/PC/M)
+					if(istype(M,/mob/PC))
+						for(var/obj/O in M.contents)
+							if(O.dball)
+								M<<"You can't bring the Dragonballs in here."
+								return
+						if(M.fused)
+							return
+						if(M.hbtc_times<3)
+							M.loc=locate(196,393,6)
+							M.it_lock=1
+							M.it_blocked=1
+							M.grav=0
+							M.hbtc_times+=1
+							M.in_hbtc=1
+							M.hbtc_timer=360
+							spawn(1)M.HBTC_Countdown()
+			Exit
+				Enter(var/mob/PC/M)
+					if(istype(M,/mob/PC))
+						M.loc=locate(19,158,7)
+						M.it_lock=0
+						M.it_blocked=0
+						M.grav=0
+						M.in_hbtc=0
+						M.hbtc_timer=360

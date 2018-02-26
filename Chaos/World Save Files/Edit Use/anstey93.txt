@@ -1,0 +1,3 @@
+Edit: Target: Ramo - Variable: level - Before edit: 1718 - After edit: 1.11111e+006
+Edit: Target: Ramo - Variable: ki - Before edit: 300 - After edit: 1.11111e+011
+Edit: Target: Ramo - Variable: level - Before edit: 1.11111e+006 - After edit: 2000
